@@ -79,6 +79,18 @@ double to_24_hour_clock(double hours)
     it is currently 01:03:20 (hh:mm:ss).
 */
 
+int get_hours(int seconds) {
+
+}
+
+int get_minutes(int seconds) {
+
+}
+
+int get_seconds(int seconds) {
+    
+}
+
 double time_to_utc(int utc_offset, double time)
 {
     /*
