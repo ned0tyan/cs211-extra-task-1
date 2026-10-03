@@ -27,6 +27,7 @@ double to_float_hours(int hours, int minutes, int seconds)
         >>> to_float_hours(1, 0, 36)
         1.01
     */
+   return hours + minutes / 60.0 + seconds / 3600.0;
 }
 
 double to_24_hour_clock(double hours)
@@ -88,7 +89,7 @@ int get_minutes(int seconds) {
 }
 
 int get_seconds(int seconds) {
-    
+
 }
 
 double time_to_utc(int utc_offset, double time)
