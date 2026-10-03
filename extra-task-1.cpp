@@ -1,4 +1,6 @@
 #include "extra-task-1.h"
+#include <cassert>
+#include <cmath>
 
 double seconds_difference(double time_1, double time_2)
 {
@@ -32,7 +34,7 @@ double to_float_hours(int hours, int minutes, int seconds)
 
 double to_24_hour_clock(double hours)
 {
-    /*
+   /*
         hours is a number of hours since midnight. Return the
         hour as seen on a 24-hour clock.
 
@@ -57,6 +59,9 @@ double to_24_hour_clock(double hours)
         with integer and fractional part of a hours separately.
         
     */
+   assert(hours >= 0);
+   double d_part{hours - trunc(hours)};
+   return static_cast<int>(trunc(hours)) % 12 + d_part;
 }
 
 /*
